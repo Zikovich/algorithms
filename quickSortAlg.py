@@ -14,9 +14,9 @@ def pivMedian(A):
     n = len(A)
      
     if n%2 == 0:
-        medianPos = (n/2)-1
+        medianPos = ((n//2)-1)
     else:
-        medianPos = (n//2)
+        medianPos = n//2
     
     if (A[0] > A[n-1] and A[0] < A[medianPos]) or (A[0] > A[medianPos] and A[0] < A[n-1]):
         return 0
@@ -65,9 +65,11 @@ def quickSortAlg(A, pivotType):
 
 if __name__ == '__main__':
     
-    with open('QuickSort.txt') as f:
-        a = [int(x) for x in f]
+    #with open('QuickSort.txt') as f:
+    #    a = [int(x) for x in f]
         
+    a = [1,2,3,4,5]
+    #res = a[::-1]
     (outPut, splitCount) = quickSortAlg(a, 3)
   #  print("outPut= ", outPut)
     print("Spiltin Inv=  ", splitCount)
